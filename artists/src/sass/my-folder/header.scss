@@ -1,0 +1,102 @@
+body{
+	overflow-x: hidden;
+	font-family: 'Roboto';
+}
+header{
+	background: #1B969E;
+	display: flex;
+	align-items: center;
+	height: 32px;
+	ul{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		list-style: none;
+	}
+	ul li{
+		margin-left: 32px;
+	}
+	a{
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 16px;
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+}
+a:hover{
+	color: white;
+	border-bottom: 1px solid white; /*лінії під текстом в хедері*/
+	padding-bottom: 2px;/*відступ*/
+	transition: 0.3s;
+}
+.menu{
+	display: flex;
+	padding: 8px 0px;
+	justify-content: end;
+}
+.hum{
+	display: flex;
+	justify-content: end;
+	padding: 10px 0;
+
+}
+.header-humb{
+	border: none;
+	background: none;
+	position: fixed;
+	z-index: 1000;
+}
+button.header-humb div{
+	width: 32px;
+	height: 1px;
+	background: white;
+	margin-bottom: 7px;
+	position: relative;
+}
+
+@media(max-width: 990px){
+	.menu{
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		justify-content:center;
+		text-align: center;
+		background: #1B969E;
+		height: 100vh;
+		width: 101%;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		transform:translateX(-115%);
+		transition: 0.6s;
+	}
+	header ul li{
+		padding-bottom: 17px;
+	}
+	.d-none{
+		display: block!important;
+	}
+	.hum{
+		display: block!important;
+		text-align: end;
+		padding: 8px;
+		padding-bottom: 25px;
+		float: right;
+	}
+	.opened{
+		transform: translateX(-5%);
+		transition: 0.6s;
+		width: 106%;
+		z-index: 20;
+	}
+}
+@media(max-width: 575px){
+	.header-humb{
+		right: 26px;
+		top: 9px;
+	}
+}
