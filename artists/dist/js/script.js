@@ -2,6 +2,33 @@
 jQuery('.header-humb').on('click', function(){
 	jQuery('.menu').toggleClass('opened');
 })
+//два таба з айді 
+//tab-3(прихований в коментах)
+$(document).on('click', '#tb-1 .main-tabs-button a',function(e){
+  //ця подія для того,щоб не екран не пригав при натиску
+  e.preventDefault()
+  //buttons
+  $('#tb-1 .main-tabs-button a').removeClass('active');
+  $(this).addClass('active');
+  //content
+  let index = $(this).attr('data-index');
+  $('#tb-1 .content-main-tab > div').removeClass('active');
+  $('#tb-1 .content-main-tab > div[data-index='+index+']').addClass('active');
+});
+
+//tab-4 
+$(document).on('click', '#tb-2 .main-tabs-button a',function(e){
+  //ця подія для того,щоб не екран не пригав при натиску
+  e.preventDefault()
+  //buttons
+  $('#tb-2 .main-tabs-button a').removeClass('active');
+  $(this).addClass('active');
+  //content
+  let index = $(this).attr('data-index');
+  $('#tb-2 .content-main-tab > div').removeClass('active');
+  $('#tb-2 .content-main-tab > div[data-index='+index+']').addClass('active');
+});
+
 
 
 

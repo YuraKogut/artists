@@ -1,0 +1,12 @@
+.content-main-tab{
+	&>div{
+		display: none;
+		&.active{
+			background: red;
+			display: block;
+		}
+	}
+	
+}
+
+
